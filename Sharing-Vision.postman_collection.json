@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "e2c82b1b-ab57-4e5b-8565-531a68398ddf",
+		"name": "Sharing-Vision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27629521"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Embracing the wonders of the natural world through exploration, adventure, and discovery brings inspiration, joy, and endless memories to life\",  \r\n    \"content\": \"Nature has always been a source of wonder and inspiration. The vast mountains, deep forests, and endless oceans remind us of the beauty that exists beyond our daily routines. Walking along hidden trails, we uncover breathtaking views and unexpected encounters with wildlife. Birds sing melodious tunes, rivers carve paths through valleys, and the sky transforms with each passing hour. Every sunrise paints a masterpiece, while every sunset tells a different story. Traveling to remote places, we experience the peace that only nature can provide. The whispering wind through towering trees, the rhythmic crashing of waves, and the distant call of an eagle remind us of the world's harmony. Adventures take us to places untouched by modern life, where we connect with the earth in its purest form. Climbing rocky cliffs, crossing wooden bridges, and sitting beneath star-filled skies, we embrace the simplicity of existence. Each journey teaches us resilience, patience, and gratitude. The world is vast and filled with wonders waiting to be explored. In the end, it is not just about the places we visit but the experiences we cherish and the memories we carry forever.\", \r\n    \"category\":\"ntr\",\r\n    \"status\":\"draft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/article/2/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"2",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPostsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/article/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Exploring the beauty of nature through adventure and discovery in vast landscapes and hidden trails around the world brings joy and peace to the soul every day.\",  \r\n    \"content\": \"The journey begins with a single step into the unknown, where breathtaking landscapes unfold before our eyes. Towering mountains, lush forests, and serene rivers create a mesmerizing tapestry of nature’s finest artistry. As the sun sets, painting the sky in vibrant hues of orange and pink, we find ourselves immersed in the magic of the moment. Every trail we traverse whispers ancient stories of explorers who came before us, leaving behind traces of their dreams and aspirations. The crisp morning air fills our lungs, invigorating our spirits as we continue our adventure. Along the way, we encounter fascinating wildlife, their curious eyes watching our every move. The gentle rustling of leaves and the soothing sounds of flowing water provide a symphony of tranquility. With each passing day, we discover hidden gems—secret waterfalls cascading down rocky cliffs, meadows adorned with vibrant wildflowers, and caves echoing the whispers of history. These moments remind us of the profound connection we share with nature. As we reach the peak of our journey, standing atop a majestic summit, we realize that the true essence of adventure lies not in the destination but in the experiences we gather along the way.\", \r\n    \"category\":\"adv\",\r\n    \"status\":\"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/article/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
