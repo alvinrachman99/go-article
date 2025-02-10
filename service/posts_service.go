@@ -106,3 +106,11 @@ func (s *PostService) Delete(id int) error {
 
 	return s.postRepo.Delete(id)
 }
+
+func (s *PostService) UpdateStatusTrash(id int) error {
+	if _, err := s.postRepo.GetPostsById(id); err != nil {
+		return errors.New("data not found")
+	}
+
+	return s.postRepo.UpdateStatusTrash(id)
+}

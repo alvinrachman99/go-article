@@ -98,3 +98,16 @@ func (h *PostsHandler) Delete(c *fiber.Ctx) error {
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{"message": "Delete Success", "status": fiber.StatusOK})
 }
+
+func (h *PostsHandler) UpdateStatusTrash(c *fiber.Ctx) error {
+	id, err := strconv.Atoi(c.Params("id"))
+	if err != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "Invalid ID"})
+	}
+
+	if err := h.PostsService.UpdateStatusTrash(id); err != nil {
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": err.Error()})
+	}
+
+	return c.Status(fiber.StatusOK).JSON(fiber.Map{"message": "Update Trash Success", "status": fiber.StatusOK})
+}

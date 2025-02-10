@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS posts (
     `category` VARCHAR(100) NOT NULL,
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `status` VARCHAR(100) NOT NULL COMMENT 'Publish | Draft | Thrash',
+    `status` VARCHAR(100) NOT NULL COMMENT 'Publish | Draft | Trash',
 
     PRIMARY KEY (id)
 )

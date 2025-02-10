@@ -17,4 +17,5 @@ func SetupRoutes(app *fiber.App, db *sql.DB, cfg config.Config) {
 	article.Get("/:id", postsHandler.GetPostsById)
 	article.Put("/:id", postsHandler.Update)
 	article.Delete("/:id", postsHandler.Delete)
+	article.Patch("/:id", postsHandler.UpdateStatusTrash)
 }
