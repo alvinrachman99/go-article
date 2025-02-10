@@ -77,3 +77,10 @@ func (r *PostsRepository) Delete(id int) error {
 
 	return err
 }
+
+func (r *PostsRepository) UpdateStatusTrash(id int) error {
+	query := "UPDATE posts SET status = 'trash' WHERE id = ? "
+	_, err := r.DB.Exec(query, id)
+
+	return err
+}
